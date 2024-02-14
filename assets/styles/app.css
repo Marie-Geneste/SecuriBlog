@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
 body {
-    background-color: skyblue;
+    background-image: url("../image/background.jpg");
+    color: white;
+}
+
+.header-title {
+    font-family: "Major Mono Display", monospace;
+    font-size: 2.7rem;
+}
+
+.header {
+    background: linear-gradient(#8B37CC, transparent);
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 25px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+    margin-right: 3rem;
+    margin-top: 0.5rem;
+    font-family: "Michroma", sans-serif;
+}
+
+.navBar.active {
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
