@@ -2,8 +2,13 @@
 
 {% block body %}
 <div class="article-list">
-    <div class="article">Article</div>
-    <div class="article">Article</div>
+    {% for article in articles %}
+    <div class="article-text">
+        <div class="article-title">{{article.title}}</div>
+            <div class="article-description">{{article.description}}</div>
+    </div>
+        <img class="article-image" src='{{article.image}}' alt='{{article.title}}'>
+    {% endfor %}
 </div>
 
 {% endblock %}

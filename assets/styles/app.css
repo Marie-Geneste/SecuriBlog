@@ -48,3 +48,22 @@ a{
     text-decoration: none;
     color: white;
 }
+
+.article-list {
+    display: flex;
+    background-color: rgba(139, 55, 204, 0.7);
+    justify-content: space-around;
+    width: 78vw;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.article-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-image {
+    width: 400px;
+}
