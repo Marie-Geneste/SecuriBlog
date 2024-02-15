@@ -36,6 +36,14 @@ body {
     text-decoration: underline;
 }
 
+.navBar.hidden {
+    display: none;
+}
+
+.navBar.notHidden {
+    display: inline;
+}
+
 a{
     text-decoration: none;
     color: white;

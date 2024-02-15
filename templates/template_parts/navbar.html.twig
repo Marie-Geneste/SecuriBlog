@@ -2,7 +2,9 @@
     <h1 class="header-title">SecuriBlog</h1>
     <ul class="navbar">
         <li class="navBar {% if pageActive == 'home' %}active{% endif %}"><a href="{{ path("app_main") }}">Articles</a></li>
-        {# <li class="navBar {% if pageActive == 'login' %}active{% endif %}"><a href="{{ path("app_login") }}">Connexion</a></li>
-        <li class="navBar {% if pageActive == 'signup' %}active{% endif %}"><a href="{{ path("app_signup") }}">Inscription</a></li> #}
+        <li class="navBar {% if pageActive == 'profil' %}active{% endif %} hidden {% if app.user %}notHidden{% endif %}"><a href="{{ path("app_profil") }}">Profil</a></li>
+        <li class="navBar {% if pageActive == 'login' %}active{% endif %} {% if app.user %}hidden{% endif %}"><a href="{{ path("app_login") }}">Connexion</a></li>
+        <li class="navBar {% if pageActive == 'logout' %}active{% endif %} hidden {% if app.user %}notHidden{% endif %}"><a href="{{ path("app_logout") }}">Déconnexion</a></li>
+        <li class="navBar {% if pageActive == 'register' %}active{% endif %} {% if app.user %}hidden{% endif %}"><a href="{{ path("app_register") }}">Inscription</a></li>
     </ul>
 </div>
