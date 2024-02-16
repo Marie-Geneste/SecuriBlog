@@ -2,9 +2,13 @@
 
 {% block body %}
 
-<div class="example-wrapper">
-    <h1>Hello  {{ app.user.pseudo }}!</h1>
-
-    This is your profile
+<div class="profile-container">
+    <div class="profile-comment">
+        <p class="profile-welcome">Hello  {{ app.user.pseudo }}!</p>
+        <p class="profile-comment-text">Voici tes commentaires :</p>
+        {% for comment in comments %}
+            <p>{{comment.article.id}}{{comment.content}}{{comment.date | date("d/m/Y")}}</p>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

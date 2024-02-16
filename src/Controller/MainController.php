@@ -31,8 +31,6 @@ class MainController extends AbstractController
     public function articleByCategory($id, ArticleRepository $ArticleRepository, CategoryRepository $CategoryRepository): Response
     {
         $pageActive = 'home';
-        
-        $articles = $ArticleRepository->findAll();
 
         $categories = $CategoryRepository->findAll();
 
