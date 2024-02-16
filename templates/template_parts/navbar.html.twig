@@ -1,5 +1,5 @@
 <div class="header">
-    <h1 class="header-title">SecuriBlog</h1>
+    <a href="{{ path("app_main") }}"><h1 class="header-title">SecuriBlog</h1></a>
     <ul class="navbar">
         <li class="navBar {% if pageActive == 'home' %}active{% endif %}"><a href="{{ path("app_main") }}">Articles</a></li>
         <li class="navBar {% if pageActive == 'profil' %}active{% endif %} hidden {% if app.user %}notHidden{% endif %}"><a href="{{ path("app_profil") }}">Profil</a></li>
