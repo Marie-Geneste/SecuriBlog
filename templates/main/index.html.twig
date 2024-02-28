@@ -10,16 +10,15 @@
     <div class="article-list">
         <div class="article-text">
             <div class="article-title">{{article.title}}</div>
-                <div class="article-description">{{article.description}}</div>
+                <div class="article-description">{{article.description  | nl2br | raw}}</div>
                 <div class="carac-article">
-                    <a href=# class="article-moreinfo">Voir les commentaires</a>
+                    <a href="{{ path("app_articleById", {id: article.id}) }}" class="article-moreinfo">Voir le détail de l'article</a>
                     <button class="category-article" style="background-color: #{{article.category.color}}">{{article.category.name}}</button>
                 </div>
                 
         </div>
         <img class="article-image" src='{{article.image}}' alt='{{article.title}}'>
-    
-</div>
+    </div>
     {% endfor %}
 
 {% endblock %}

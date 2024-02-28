@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="article-list">
+    <div class="article-text">
+        <div class="article-title">{{article.title}}</div>
+            <div class="article-description">{{article.description  | nl2br | raw}}</div>
+            <div class="carac-article">
+                <button class="category-article" style="background-color: #{{article.category.color}}">{{article.category.name}}</button>
+            </div>
+            
+    </div>
+    <img class="article-image" src='{{article.image}}' alt='{{article.title}}'>
+</div>
+<div class="comment-section">
+    <p class="comment-title">Commentaires</p>
+    {% for comment in comments %}
+    <div class="comment-content">
+        <div>{{comment.user.pseudo}}</div>
+        <div>{{comment.content}}</div>
+        <div>{{comment.date | date("d/m/Y")}}</div>
+    </div>
+    {% endfor %}
+
+    {{ include('./comment/new.html.twig') }}
+</div>
+{% endblock %}

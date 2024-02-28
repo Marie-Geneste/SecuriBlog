@@ -4,11 +4,17 @@
 
 <div class="profile-container">
     <div class="profile-comment">
-        <p class="profile-welcome">Hello  {{ app.user.pseudo }}!</p>
+        <p class="profile-welcome">Hello  {{ app.user.pseudo }} !</p>
         <p class="profile-comment-text">Voici tes commentaires :</p>
         {% for comment in comments %}
-            <p>{{comment.article.id}}{{comment.content}}{{comment.date | date("d/m/Y")}}</p>
+            <div class="profile-comments">
+            <div class="profile-comment-name">{{comment.article.title}}</div>
+            <div class="profile-comment-content">{{comment.content}}</div>
+            <div class="profile-comment-date">{{comment.date | date("d/m/Y")}}</div>
+           </div>
         {% endfor %}
     </div>
+    <div class="profile-ud">UD</div>
 </div>
 {% endblock %}
+
