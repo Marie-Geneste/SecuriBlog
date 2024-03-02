@@ -55,6 +55,10 @@ class MainController extends AbstractController
         $article = $ArticleRepository->find($id);
         $comments = $CommentRepository->findBy(['article' => $id]);
         $comment = new Comment();
+        $comment->setArticle($article); 
+        $comment->setUser($this->getUser()); 
+        $comment->setStatus(true); 
+        $comment->setDate(new \DateTime());
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
 
