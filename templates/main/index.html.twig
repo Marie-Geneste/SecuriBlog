@@ -5,11 +5,17 @@
     {% for category in categories %}
         <a href="{{ path("app_articleByCategory", {id: category.id}) }}" class="category categories">{{category.name}}</a>
     {% endfor %}
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path("app_article_new") }}" class="add-button-article"><img src="{{ asset('../assets/image/add-button.svg') }}" alt="add-button"></a>
+    {% endif %}
 </div>
     {% for article in articles %}
     <div class="article-list">
         <div class="article-text">
             <div class="article-title">{{article.title}}</div>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path("app_article_edit", {id: article.id}) }}" class="edit-button-article"><img src="{{ asset('../assets/image/pen-solid.svg') }}" alt="edit-button"></a>
+            {% endif %}
                 <div class="article-description">{{article.description  | nl2br | raw}}</div>
                 <div class="carac-article">
                     <a href="{{ path("app_articleById", {id: article.id}) }}" class="article-moreinfo">Voir le détail de l'article</a>

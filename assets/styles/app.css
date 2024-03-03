@@ -365,6 +365,15 @@ textarea {
     cursor: pointer;
 }
 
-.delete-button-comment img {
-    color: white;
+.add-button-article{
+    border: none;
+    background: none;
+    cursor: pointer;
 }
+
+.add-button-article img {
+    width: 3rem;
+    height: 3rem;
+}
+
+

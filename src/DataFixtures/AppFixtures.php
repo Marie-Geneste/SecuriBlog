@@ -55,6 +55,14 @@ class AppFixtures extends Fixture
         $marie->setPseudo('Naya');
         $manager->persist($marie);
 
+        $admin = new User();
+        $admin->setEmail('nayade.hera@gmail.com');
+        $adminHash = $this->passwordHasher->hashPassword($admin, 'admin');
+        $admin->setPassword($adminHash);
+        $admin->setRoles(['ROLE_ADMIN']);
+        $admin->setPseudo('BOSS');
+        $manager->persist($admin);
+
         $comment_injsql_marie = new Comment();
         $comment_injsql_marie -> setContent("Trop bien l'article : trop cool le frérot !");
         $comment_injsql_marie -> setStatus(true);
