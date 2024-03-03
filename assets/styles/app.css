@@ -272,7 +272,7 @@ a{
 .profile-container {
     display: flex;
     justify-content: center;
-    gap: 25rem;
+    gap: 10rem;
     font-family: "Michroma", sans-serif;;
 }
 
@@ -302,8 +302,7 @@ a{
 }
 
 .profile-ud{
-    background-color: pink;
-    width: 15vw;
+    display: flex;
 }
 
 .comment-section {

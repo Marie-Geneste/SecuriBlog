@@ -18,6 +18,16 @@
             </div>
         {% endfor %}
     </div>
-    <div class="profile-ud">UD</div>
+    <div class="profile-ud">
+        <div class="edit-user">
+            <h1>Modification de l'utilisateur</h1>
+
+                {{ include('user/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+            <h1>Supression de l'utilisateur</h1>
+
+                {{ include('user/_delete_form.html.twig') }}
+        </div>
+    </div>
 </div>
 {% endblock %}
