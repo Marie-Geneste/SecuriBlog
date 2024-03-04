@@ -19,4 +19,4 @@ Un utilisateur connecté peut publier un commentaire et gérer son profil sur la
 Un administrateur : nayade.hera@gmail.com || admin
 Ce dernier voit des boutons apparaître sur la page d'accueil rien que pour lui : il peut ajouter un article avec le bouton + à côté des catégories et il peut modifier un article avec le bouton pen en dessous des titres des articles. Il peut aussi supprimer un article dans l'éditeur de ce dernier.
 
-Travail non fini : le css et la partie modération par l'admin des commentaires et des utilisateurs qui ont un statut en bdd pour pouvoir les désactiver si l'admin en ressent le besoin.
+Travail non fini : le responsive et la partie modération par l'admin des commentaires et des utilisateurs qui ont un statut en bdd pour pouvoir les désactiver si l'admin en ressent le besoin.
