@@ -14,13 +14,22 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title')
-            ->add('description')
-            ->add('image')
-            ->add('date')
+            ->add('title',  null, [
+                'label' => 'Titre :',
+                ])
+            ->add('description', null, [
+                'label' => 'Contenu :',
+                ])
+            ->add('image', null, [
+                'label' => 'Image lien url (pas obligatoire) :',
+                ])
+            ->add('date', null, [
+                'label' => 'Date :',
+                ])
             ->add('category', EntityType::class, [
                 'class' => Category::class,
-'choice_label' => 'id',
+                'choice_label' => 'name',
+                'label' => 'Catégorie :'
             ])
         ;
     }
